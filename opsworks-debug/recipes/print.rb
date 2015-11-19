@@ -7,4 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-Chef::Log.info("hello there")
+Chef::Log.info("============")
+
+output="#{Chef::JSONCompat.to_json_pretty(node.to_hash)}"
+Chef::Log.info("#{output}")
+
+Chef::Log.info("============")
